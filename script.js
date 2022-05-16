@@ -239,7 +239,6 @@ const Words = [
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 let Word = Words[Math.floor(Math.random() * Words.length)].toUpperCase();
 let WordArray = Word.split("");
-console.log(`I hope you feel bad for cheating!\nAnyway your word is "${Word}"`);
 
 let score = 0;
 let currentRow = 0;
