@@ -254,10 +254,6 @@ const guessWord = async () => {
     const keyboardButtons = document.querySelectorAll("button[data-key]");
 
     if (guessedWordArray.length === 0) return;
-    if (!(guessedWord in Words)) {
-      sendMessage("error", "Word not in word list");
-      return;
-    };
     if (guessedWord.length < maxRows) {
         for (let i = 0; i < row.children.length; i++)
             row.children[i].textContent = "";
