@@ -259,6 +259,11 @@ const guessWord = async () => {
             row.children[i].textContent = "";
         sendMessage("error", "Word must be 5 letters long");
         return;
+    } else if (!(Words.includes(guessedWord.toLowerCase()))) {
+        for (let i = 0; i < row.children.length; i++)
+            row.children[i].textContent = "";
+        sendMessage("error", "Word not in word list")
+        return;
     } else {
         for (let i = 0; i < guessedWordArray.length; i++) {
             row.getElementsByClassName(`${i}`)[0].textContent =
