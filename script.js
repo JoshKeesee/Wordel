@@ -1,4 +1,5 @@
 const Words = [
+    "among",
     "leech",
     "close",
     "tenth",
@@ -411,6 +412,7 @@ const sendMessage = (type, message) => {
 };
 const showHide = () => {
     document.getElementById("load-container").style = "display: none";
+    document.getElementById("load-container").style = "opacity: 0";
     document.getElementById("game-container").style = "display: block";
 };
 setTimeout(() => {
